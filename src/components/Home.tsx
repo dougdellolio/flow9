@@ -103,6 +103,8 @@ const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
           bg: 'cyan.400',
           color: 'white',
         }}
+        bg={true ? 'cyan.400' : 'inherit'} //can get active route here
+        color={true ? 'white' : 'inherit'}
         {...rest}>
         {icon && (
           <Icon
@@ -268,8 +270,8 @@ const Home = () => {
             </Card>
           </SimpleGrid>
           <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px' mb='20px'>
-          <Transactions />
-          <CashFlow />
+            <Transactions />
+            <CashFlow />
           </SimpleGrid>
           {/* <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
             <Button>Helo</Button>
